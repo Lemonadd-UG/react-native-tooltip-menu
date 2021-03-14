@@ -242,6 +242,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   tooltipMargin: {
+    flexDirection: 'row',
     borderBottomWidth: 1,
     borderBottomColor: '#2f2f30',
   },
