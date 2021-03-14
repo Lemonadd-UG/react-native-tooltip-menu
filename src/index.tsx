@@ -142,7 +142,8 @@ class Tooltip extends React.Component<Props, State> {
       touchableItemStyle,
       labelStyle,
       modalButtonStyle,
-      modalStyle
+      modalStyle,
+      modalWidth
     } = this.props;
     const { isModalOpen, isButtonDisabled } = this.state;
     const { onRequestClose } = this.props;
@@ -181,6 +182,7 @@ class Tooltip extends React.Component<Props, State> {
                     styles.tooltipContainer,
                     {
                       top: this.state.componentHeight + 10,
+                      width: modalWidth
                     },
                     { opacity: this.state.opacity },
                   ]}
