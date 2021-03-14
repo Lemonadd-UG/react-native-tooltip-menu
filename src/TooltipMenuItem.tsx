@@ -25,6 +25,7 @@ const TooltipMenuItem = ({
   label,
   labelStyle,
   testID,
+  iconName
 }: Props) => (
   <View style={containerStyle} testID={testID}>
     <TouchableOpacity
@@ -32,8 +33,8 @@ const TooltipMenuItem = ({
       onPress={onPress}
     >
       <MaterialCommunityIcons
-					name={'skip-previous'}
-					size={45}
+					name={iconName}
+					size={25}
 					style={{ color: 'white' }}
 			/>
       {typeof label === 'function' ? (
