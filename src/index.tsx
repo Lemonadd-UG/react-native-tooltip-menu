@@ -47,6 +47,7 @@ interface Props {
   modalButtonStyle?: ViewStyle;
   touchableItemStyle?: ViewStyle;
   labelStyle?: ViewStyle;
+  modalStyle?: ViewStyle;
   widthType: WidthType;
   onRequestClose?: () => void;
 }
@@ -141,13 +142,14 @@ class Tooltip extends React.Component<Props, State> {
       touchableItemStyle,
       labelStyle,
       modalButtonStyle,
+      modalStyle
     } = this.props;
     const { isModalOpen, isButtonDisabled } = this.state;
     const { onRequestClose } = this.props;
     const widthStyle = mapWight(widthType);
 
     return (
-      <View style={styles.component}>
+      <View style={[modalStyle]}>
         <View
           style={[componentWrapperStyle]}
           onLayout={(event) =>
@@ -173,7 +175,7 @@ class Tooltip extends React.Component<Props, State> {
               style={[{ flex: 1 }, modalButtonStyle]}
               onPress={this.hideModal}
             >
-              <View style={[styles.component]}>
+              <View style={[modalStyle]}>
                 <Animated.View
                   style={[
                     styles.tooltipContainer,
