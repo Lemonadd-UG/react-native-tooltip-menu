@@ -238,7 +238,7 @@ export default Tooltip;
 
 const styles = StyleSheet.create({
   overlay: {
-    backgroundColor: 'rgba(0,0,0,0.5)',
+    backgroundColor: 'rgba(0,0,0,0.1)',
     flex: 1,
   },
   tooltipMargin: {
