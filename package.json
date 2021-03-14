@@ -121,9 +121,9 @@
     "source": "src",
     "output": "lib",
     "targets": [
-      "commonjs",
-      "module",
-      "typescript"
+        ["commonjs", { "configFile": true }],
+        ["module", { "configFile": true }],
+        "typescript"
     ]
   },
   "dependencies": {
