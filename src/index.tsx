@@ -5,34 +5,16 @@ import {
   Animated,
   TouchableOpacity,
   StyleSheet,
-  Dimensions,
   ViewStyle,
 } from 'react-native';
 
 import TooltipMenuItem from './TooltipMenuItem';
-
-const window = Dimensions.get('window');
 
 export enum WidthType {
   AUTO = 'auto',
   HALF = 'half',
   FULL = 'full',
 }
-
-const mapWight = (type: WidthType) => {
-  switch (type) {
-    case WidthType.HALF:
-      return {
-        width: window.width / 2,
-      };
-    case WidthType.FULL:
-      return {
-        width: window.width * 0.9,
-      };
-    default:
-      return null;
-  }
-};
 
 interface Props {
   buttonComponent: React.ReactNode;
@@ -49,6 +31,7 @@ interface Props {
   touchableItemStyle?: ViewStyle;
   labelStyle?: ViewStyle;
   modalStyle?: ViewStyle;
+  modalWidth?: string;
   widthType: WidthType;
   onRequestClose?: () => void;
 }
@@ -138,17 +121,15 @@ class Tooltip extends React.Component<Props, State> {
       items,
       componentWrapperStyle,
       overlayStyle,
-      widthType,
       labelContainerStyle,
       touchableItemStyle,
       labelStyle,
       modalButtonStyle,
       modalStyle,
-      modalWidth
+      modalWidth,
     } = this.props;
     const { isModalOpen, isButtonDisabled } = this.state;
     const { onRequestClose } = this.props;
-    const widthStyle = mapWight(widthType);
 
     return (
       <View style={[modalStyle]}>
@@ -183,7 +164,7 @@ class Tooltip extends React.Component<Props, State> {
                     styles.tooltipContainer,
                     {
                       top: this.state.componentHeight + 10,
-                      width: modalWidth
+                      width: modalWidth,
                     },
                     { opacity: this.state.opacity },
                   ]}
