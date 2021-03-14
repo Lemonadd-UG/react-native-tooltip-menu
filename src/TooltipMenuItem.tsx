@@ -16,6 +16,7 @@ interface Props {
   touchableStyle?: ViewStyle;
   labelStyle?: TextStyle;
   testID?: string;
+  iconName?: string;
 }
 
 const TooltipMenuItem = ({
