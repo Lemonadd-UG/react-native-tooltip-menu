@@ -58,6 +58,7 @@ export default TooltipMenuItem;
 
 const styles = StyleSheet.create({
   container: {
+    flexDirection: 'row',
     padding: 10,
   },
 });
