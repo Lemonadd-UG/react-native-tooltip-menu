@@ -251,6 +251,7 @@ const styles = StyleSheet.create({
   tooltipContainer: {
     backgroundColor: 'white',
     width: '13.69047619047619vw',
+    right: '0vw',
     borderRadius: 10,
     position: 'absolute',
   },
