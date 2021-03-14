@@ -243,7 +243,7 @@ const styles = StyleSheet.create({
   },
   tooltipMargin: {
     borderBottomWidth: 1,
-    borderBottomColor: '#E1E1E1',
+    borderBottomColor: '#2f2f30',
   },
   component: {
     position: 'absolute',
