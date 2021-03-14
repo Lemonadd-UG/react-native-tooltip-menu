@@ -180,7 +180,7 @@ class Tooltip extends React.Component<Props, State> {
                   style={[
                     styles.tooltipContainer,
                     {
-                      bottom: this.state.componentHeight + 10,
+                      top: this.state.componentHeight + 10,
                     },
                     widthStyle,
                     { opacity: this.state.opacity },
@@ -256,7 +256,7 @@ const styles = StyleSheet.create({
   },
   triangle: {
     position: 'absolute',
-    top: -10,
+    top: 50,
     left: 22,
     width: 10,
     height: 10,
