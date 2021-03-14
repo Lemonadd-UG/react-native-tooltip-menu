@@ -38,6 +38,7 @@ interface Props {
   buttonComponent: React.ReactNode;
   items: {
     label: (() => React.ReactNode) | string;
+    iconName?: string;
     onPress: () => void;
     testID?: string;
   }[];
@@ -207,6 +208,7 @@ class Tooltip extends React.Component<Props, State> {
                       <TooltipMenuItem
                         key={key}
                         label={item.label}
+                        iconName={item.iconName}
                         onPress={() => this.handleClick(item.onPress)}
                         containerStyle={classes}
                         touchableStyle={touchableItemStyle}
