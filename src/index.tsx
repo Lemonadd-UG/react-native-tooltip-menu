@@ -182,7 +182,6 @@ class Tooltip extends React.Component<Props, State> {
                     {
                       top: this.state.componentHeight + 10,
                     },
-                    widthStyle,
                     { opacity: this.state.opacity },
                   ]}
                 >
@@ -251,6 +250,7 @@ const styles = StyleSheet.create({
   },
   tooltipContainer: {
     backgroundColor: 'white',
+    width: '13.69047619047619vw',
     borderRadius: 10,
     position: 'absolute',
   },
