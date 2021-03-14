@@ -7,6 +7,7 @@ import {
   TextStyle,
   ViewStyle,
 } from 'react-native';
+import MaterialCommunityIcons from 'react-native-vector-icons/dist/MaterialCommunityIcons';
 
 interface Props {
   onPress: () => void;
@@ -30,6 +31,11 @@ const TooltipMenuItem = ({
       style={[styles.container, touchableStyle]}
       onPress={onPress}
     >
+      <MaterialCommunityIcons
+					name={'skip-previous'}
+					size={45}
+					style={{ color: 'white' }}
+			/>
       {typeof label === 'function' ? (
         label()
       ) : (
